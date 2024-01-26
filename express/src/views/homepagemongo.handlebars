@@ -1,0 +1,39 @@
+<h2>Productos en Mongo Atlas:</h2>
+<a href="/">Home Page</a>
+<hr>
+<a href="/realtimeproducts">Realtime Products</a>
+<hr>
+<a href="/chat">Chat</a>
+<hr />
+
+<ul>
+    {{#each productos}}
+        <li>
+            {{this.title}} {{this.description}}  {{this.price}}  {{this.thumbnail}}  {{this.stock}}  {{this.category}} - <strong>Code:</strong> <i>{{this.code}}- <strong>ID:</strong> <i>{{this._id}}
+                <a href="/products/{{this._id}}">Ver producto</a>
+            </i>
+        </li>
+    {{/each}}
+</ul>
+<br>
+
+<br>
+{{!-- Modificando para que los datos incrementen de  /products/ --}}
+<a href="/products/?pagina=1&limit={{limit}}&sort={{sortDirection}}">Pag.1</a>
+
+{{#if hasPrevPage}}
+    <a href="/products/?pagina={{prevPage}}&limit={{limit}}&sort={{sortDirection}}">Pag. Ant.</a>
+{{else}}
+<span>Pag. Ant.</span>
+{{/if}}
+
+
+{{#if hasNextPage}}
+    <a href="/products/?pagina={{nextPage}}&limit={{limit}}&sort={{sortDirection}}">Pag. Sig.</a>
+{{else}}
+    <span>Pag. Sig.</span>
+{{/if}}
+
+
+
+<a href="/products/?pagina={{totalPages}}&limit={{limit}}&sort={{sortDirection}}">Ult. Pag.</a>

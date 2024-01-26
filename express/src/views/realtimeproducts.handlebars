@@ -1,0 +1,31 @@
+<h2>Realtime Products</h2>
+<h2>Websocket</h2>
+<a href="/">Home Page</a>
+<hr />
+<a href="/chat">Chat</a>
+
+<hr />
+<a href="/products">Products</a>
+<hr />
+
+<ul id="lista1">
+  {{#each resultado}}
+    {{!-- <div id="{{this.id}}"> --}}
+      <li id={{this.id}}>ID: {{this.id}} Producto: {{this.title}}</li>
+      {{!-- <h3>Título: {{this.title}}</h3> --}}
+      {{!-- <br />
+      <hr /> --}}
+    {{!-- </div> --}}
+  {{/each}}
+
+  {{!-- <div id="divId">
+
+  </div> --}}
+
+</ul>
+
+{{!Libreia del socket de lado del cliente- http://localhost:8080/socket.io/socket.io.js }}
+
+{{! levantamos el script de socket.io }}
+<script src="socket.io/socket.io.js"></script>
+<script src="assets/scripts/realtimeproducts.js"></script>

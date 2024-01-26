@@ -1,0 +1,61 @@
+<h2>Producto</h2>
+<a href="/realtimeproducts">Realtime Products</a>
+<hr />
+<a href="/chat">Chat</a>
+<hr />
+<a href="/products">Products</a>
+<hr />
+<ul>
+  {{!-- {{#each existe}} --}}
+  <div>
+
+    <h3>ID: {{_id}}</h3>
+    <h3>Título: {{title}}</h3>
+
+    <h3>Descripción: {{description}}</h3>
+    <h3>Precio: {{price}}</h3>
+    <h3>Imagen: {{thumbnail}}</h3>
+    <h3>Código: {{code}}</h3>
+    <h3>Stock: {{stock}}</h3>
+    <h3>Categoría: {{category}}</h3>
+    <h3>Status: {{status}}</h3>
+    <br />
+    <hr />
+  </div>
+
+  <div>
+  <h3>Listado ID de carritos</h3>
+  <span>NOTA:Solo debe agregar un solo carrito</span>
+  <br>
+  <br>
+<!-- Agregamos el método POST y la acción "/add-to-cart" al formulario -->
+<form method="post" action="/api/cartsmongo/add-to-cart">
+  {{#each carts}}
+    <label>
+       <input type="radio" name="cartId" value="{{this._id}}">
+      ID: {{this._id}}
+    </label>
+    <br>
+  {{/each}}
+
+  <!-- Agregamos campos ocultos con la información del producto -->
+  <input type="hidden" name="productId" value="{{_id}}">
+  <input type="hidden" name="title" value="{{title}}">
+  <input type="hidden" name="description" value="{{description}}">
+  <input type="hidden" name="price" value="{{price}}">
+  <input type="hidden" name="thumbnail" value="{{thumbnail}}">
+  <input type="hidden" name="code" value="{{code}}">
+  <input type="hidden" name="stock" value="{{stock}}">
+  <input type="hidden" name="category" value="{{category}}">
+  <input type="hidden" name="status" value="{{status}}">
+
+  <button type="submit">Agregar al carrito</button>
+</form>
+</div>
+
+
+
+</ul>
+
+{{! <script src="socket.io/socket.io.js"></script>
+<script src="assets/scripts/home.js"></script> }}

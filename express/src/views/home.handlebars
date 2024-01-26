@@ -1,0 +1,37 @@
+<h2>Home Page</h2>
+<a href="/realtimeproducts">Realtime Products</a>
+<hr>
+<a href="/chat">Chat</a>
+<hr />
+<a href="/products">Products</a>
+<hr />
+{{>menu}}
+<ul>
+  {{#each resultado}}
+    <div>
+
+      <h3>ID: {{this.id}}</h3>
+      <h3>Título: {{this.title}}</h3>
+
+      <h3>Descripción: {{this.description}}</h3>
+      <h3>Precio: {{this.price}}</h3>
+      <h3>Imagen: {{this.thumbnail}}</h3>
+      <h3>Código: {{this.code}}</h3>
+      <h3>Stock: {{this.stock}}</h3>
+      <h3>Categoría: {{this.category}}</h3>
+      <h3>Status: {{this.status}}</h3>
+      <br />
+      <hr />
+    </div>
+
+  {{/each}}
+
+  <div id="divId">
+
+  </div>
+
+</ul>
+
+
+<script src="socket.io/socket.io.js"></script>
+<script src="assets/scripts/home.js"></script>

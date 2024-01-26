@@ -1,0 +1,69 @@
+[
+     {
+          "id": 1,
+          "title": "Zapato Urbano",
+          "description": "zapato",
+          "price": 100,
+          "thumbnail": [
+               "www.imagen.com/image1",
+               "www.imagen.com/image2"
+          ],
+          "code": "A33313",
+          "stock": 100,
+          "category": "ropa",
+          "status": true
+     },
+     {
+          "id": 2,
+          "title": "Cartera roja",
+          "description": "cartera",
+          "price": 100,
+          "thumbnail": [
+               "www.imagen.com/image1",
+               "www.imagen.com/image2"
+          ],
+          "code": "ABC002",
+          "stock": 10,
+          "category": "ropa",
+          "status": true
+     },
+     {
+          "id": 3,
+          "title": "Pantalon Cargo",
+          "description": "pantalon",
+          "price": 100,
+          "thumbnail": [
+               "www.imagen.com/image1",
+               "www.imagen.com/image2"
+          ],
+          "code": "ABC003",
+          "stock": 10,
+          "category": "ropa",
+          "status": true
+     },
+     {
+          "id": 4,
+          "title": "Cartera de cuero",
+          "description": "cartera",
+          "price": 100,
+          "thumbnail": [
+               "www.imagen.com/image1",
+               "www.imagen.com/image2"
+          ],
+          "code": "ABC004",
+          "stock": 10,
+          "category": "ropa",
+          "status": true
+     },
+     {
+          "id": 5,
+          "title": "Cartera de playa",
+          "description": "cartera",
+          "price": 100,
+          "thumbnail": [],
+          "code": "ABC0eee",
+          "stock": 10,
+          "category": "ropa",
+          "status": true
+     }
+]
